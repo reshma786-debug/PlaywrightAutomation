@@ -1,6 +1,6 @@
 const {test,expect} = require ('@playwright/test')
 
-test("Verify Upload", async ({page}) => {
+test("Verify File Upload", async ({page}) => {
 
     await page.goto("https://the-internet.herokuapp.com/upload")
     await page.locator("#file-upload").setInputFiles("/Users/Reshma/Downloads/Teddy.avif")
