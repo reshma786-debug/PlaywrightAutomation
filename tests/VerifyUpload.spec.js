@@ -6,6 +6,6 @@ test("Verify Upload", async ({page}) => {
     await page.locator("#file-upload").setInputFiles("/Users/Reshma/Downloads/Teddy.avif")
     await page.locator("#file-submit").click()
     const fileSuccessMsg = await page.getByText("File Uploaded!").textContent()
-      console.log("fileSuccessMsg :"+ fileSuccessMsg);
+    console.log("fileSuccessMsg :"+ fileSuccessMsg);
     expect(fileSuccessMsg.includes("File Uploaded!")).toBeTruthy()
 })
