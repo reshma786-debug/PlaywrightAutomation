@@ -15,9 +15,9 @@ class LoginPage {
         await expect(this.page.locator(this.signoutHeader)).toBeVisible()
     }
 
-    async loginToApplication() {
-        await this.page.fill(this.userName, "admin@email.com")
-        await this.page.fill(this.password, "admin@123")
+    async loginToApplication(user,password) {
+        await this.page.fill(this.userName, user)
+        await this.page.fill(this.password,password)
         await this.page.click(this.loginbutton)
     }
 }
