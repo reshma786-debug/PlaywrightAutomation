@@ -1,3 +1,6 @@
+
+const { expect } = require('@playwright/test')
+
 class LoginPage {
 
     constructor(page) {
@@ -5,7 +8,13 @@ class LoginPage {
         this.userName = "#email1"
         this.password = "//input[@placeholder='Enter Password']"
         this.loginbutton = "//button[text()='Sign in']"
+        this.signoutHeader = "//*[text()='Sign in']"
     }
+
+    async signOutHeader() {
+        await expect(this.page.locator(this.signoutHeader)).toBeVisible()
+    }
+
     async loginToApplication() {
         await this.page.fill(this.userName, "admin@email.com")
         await this.page.fill(this.password, "admin@123")

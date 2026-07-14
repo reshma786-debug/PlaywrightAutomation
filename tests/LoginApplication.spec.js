@@ -12,4 +12,5 @@ test('Login To Application using POM', async ({ page }) =>
     const homepage = new HomePage(page)
     await homepage.verifyManageOption()
     await homepage.logoutApplication()
+    await loginPage.signOutHeader()
 });
