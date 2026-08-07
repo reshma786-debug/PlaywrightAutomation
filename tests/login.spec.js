@@ -28,5 +28,5 @@ test("Valid login", async ({page})=>{
     await page.getByAltText("profile picture").click()
     await page.getByText("Logout").click()
     await expect(page).toHaveURL(/login/)
-    
+   
 })
