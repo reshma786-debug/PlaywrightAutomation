@@ -15,6 +15,7 @@ const {test,expect} = require('@playwright/test')
 //require() → Loads the Playwright package.
 //'@playwright/test' → Specifies which package to load.
 //; → Ends the statement
+
 test("Valid login", async ({page})=>{
 //test(Calls the Playwright test function.    
 //({ page }) Destructures the page object provided by Playwright. page represents a browser tab.
