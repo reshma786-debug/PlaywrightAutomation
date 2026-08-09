@@ -9,4 +9,5 @@ const {test,expect} = require ('@playwright/test')
        page.keyboard.press("Backspace")
        page.keyboard.press("Meta+V")
        page.keyboard.press("Enter")
+       
     })
