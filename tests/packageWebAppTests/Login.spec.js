@@ -17,9 +17,11 @@ const {test,expect} = require('@playwright/test')
 //; → Ends the statement
 
 test("Valid login", async ({page})=>{
+
 //test(Calls the Playwright test function.    
 //({ page }) Destructures the page object provided by Playwright. page represents a browser tab.
 //async Indicates the function can perform asynchronous operations, such as opening a page or clicking a button.
+   
     await page.goto("https://opensource-demo.orangehrmlive.com")
     await page.getByPlaceholder("Username").type("Admin")
     await page.locator("input[name=password]").type("admin123")
