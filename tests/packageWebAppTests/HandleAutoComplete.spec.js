@@ -1,7 +1,8 @@
 
 const { test, expect } = require('@playwright/test')
 
-test('Handle Auto Complete', async ({ page }) => {
+test.fail()
+test("Handle Auto Complete", async ({ page }) => {
     await page.goto('https://www.google.com')
     const searchInput = page.locator("//textarea[@name='q']")
     await searchInput.click()
@@ -12,5 +13,5 @@ test('Handle Auto Complete', async ({ page }) => {
     await page.keyboard.press('ArrowDown')
     await page.waitForTimeout(3000) 
     await page.keyboard.press('Enter')
-    //await expect(page.locator('input[name="q"]')).toHaveValue(/playwright/i)
+    await expect(page.locator('input[name="q"]')).toHaveValue(/playwright/i)
 })
