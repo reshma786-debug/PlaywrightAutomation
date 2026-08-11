@@ -34,8 +34,8 @@ module.exports = defineConfig({
   },
 
   /* Configure projects for major browsers */
-  projects: [    
-      {
+  projects: [
+    {
       name: 'setup db',
       testMatch: /global\.setup\.ts/,
       teardown: 'cleanup db',
@@ -44,14 +44,14 @@ module.exports = defineConfig({
       name: 'cleanup db',
       testMatch: /global\.teardown\.ts/,
     },
-     { 
-        ...devices['Desktop Chrome'],
-        viewport:{width:1920,height:1080},
-        screenshot:"on",
-        video:"on",
-        trace:"on"
-       },
-    
+    {
+      ...devices['Desktop Chrome'],
+      viewport: { width: 1920, height: 1080 },
+      screenshot: "on",
+      video: "on",
+      trace: "on"
+    },
+
   ],
 
   // /* Run your local dev server before starting the tests */
