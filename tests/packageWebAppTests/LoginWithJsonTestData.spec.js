@@ -1,8 +1,8 @@
 const { test, expect } = require('@playwright/test');
-const data = require('../../testData.json');
+const data = require('../testdata/testData.json');
 
 test("Login Facebook", async ({ page }) => {
   await page.goto(data.url);
-  await page.locator("//input[@name='email']").type(data.username);
+  await page.locator("//input[@name='email']").fill(data.username);
   await page.locator("//label[text()='Password']").fill(data.password);
 });

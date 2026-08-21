@@ -1,5 +1,3 @@
-
-
 const { test, expect } = require('@playwright/test')
 
 test("mocks a fruit and doesn't call api", async ({ page }) => {
