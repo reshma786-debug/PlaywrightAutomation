@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const data = require('../testdata/testData.json');
+const data = require('../../Testdata/testData.json');
 
 test("Login Facebook", async ({ page }) => {
   await page.goto(data.url);
